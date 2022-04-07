@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="BgVideo">
+      <video id="video" autoplay muted loop>
+        <source src="Waterfall.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- container -->
+    <div class="container">
+      <!-- first page -->
+      <div class="firstPage">
+        <h1>Create a Custom Countdown!</h1>
+        <form id="countdownForm" class="form">
+          <div class="titleContainer">
+            <label for="title">Title</label><br />
+            <input
+              type="text"
+              id="titleFirst"
+              name="title"
+              placeholder="what are you counting down to?"
+            />
+          </div>
+          <div class="selectDateContainer">
+            <label for="selectDate">Select a Date</label><br />
+            <input type="date" id="selectDate" name="selectDate" />
+          </div>
+          <button type="submit" id="submitBtn">Submit</button>
+        </form>
+      </div>
+
+      <!-- second page -->
+      <div class="secondPage" hidden>
+        <h1 id="titleSecond"></h1>
+        <div class="timeContainer">
+          <div class="t-container">
+            <span class="numTime days">0</span>
+            <span class="wordTime">DAYS</span>
+          </div>
+          <div class="t-container">
+            <span class="numTime hours">0</span>
+            <span class="wordTime">HOURS</span>
+          </div>
+          <div class="t-container">
+            <span class="numTime min">0</span>
+            <span class="wordTime">MINUTES</span>
+          </div>
+          <div class="t-container">
+            <span class="numTime sec">0</span>
+            <span class="wordTime">SECONDS</span>
+          </div>
+        </div>
+        <button type="submit" id="resetBtn">RESET</button>
+      </div>
+      <!-- third page -->
+      <div class="thirdPage" hidden>
+        <h1 class="complete-title">Countdown Complete!</h1>
+        <h1 id="completeInfo"></h1>
+        <button type="submit" id="completeButton">NEW COUNTDOWN</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
